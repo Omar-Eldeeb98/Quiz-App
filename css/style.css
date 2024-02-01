@@ -1,0 +1,344 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+}
+
+main.main_section {
+  background-color: tomato;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 50px;
+}
+
+#particles-js h1 {
+  background-color: #212529d2;
+  width: 100% !important;
+}
+
+#particles-js h1 span {
+  color: white;
+  font-size: 65px;
+  letter-spacing: 5px !important;
+  overflow: hidden;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0 !important;
+}
+
+/* ============================================================================== title styling ================================================ */
+#app_title {
+  position: relative;
+  /* z-index: 999; */
+}
+
+.loader {
+  font-size: 48px;
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 2px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.loader::after {
+  content: "QUIZ APP";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #263238;
+  text-shadow: 0 0 2px #fff, 0 0 1px #fff, 0 0 1px #fff;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  animation: animloader 2.5s linear infinite;
+}
+
+@keyframes animloader {
+  0% {
+    height: 100%;
+  }
+
+  100% {
+    height: 0%;
+  }
+}
+
+/*=========================================================== title styling ======================================================*/
+
+/*=============================================== Settings section =============================================================*/
+#settings_section {
+  position: relative;
+  z-index: 999;
+}
+#category {
+  background-color: #482f2f;
+  color: white;
+  border: 1px solid tomato;
+  padding: 12px;
+  transition: all 0.3s;
+}
+
+#category:focus {
+  box-shadow: none;
+  border: 1px solid tomato;
+}
+
+.form-select {
+  --bs-form-select-bg-img: url(
+    data:image/svg + xml,
+    %3csvgxmlns="http://www.w3.org/2000/svg"viewBox="0 0 16 16"%3e%3cpathfill="none"stroke="%23343a40"stroke-linecap="round"stroke-linejoin="round"stroke-width="2"d="m2 5 6 6 6-6"/%3e%3c/svg%3e
+  );
+}
+
+.form-check-input:checked {
+  background-color: tomato;
+  border-color: tomato !important;
+  box-shadow: none;
+}
+
+.radio_container {
+  background-color: #482f2f !important;
+}
+
+.radio_container_ {
+  background-color: #263238 !important;
+}
+
+.amount input {
+  background-color: #482f2f !important;
+  color: white;
+  border: 1px solid tomato;
+  padding: none;
+  padding: 12px;
+}
+
+.badge {
+  border: 1px solid var(--bs-warning);
+  background: transparent;
+  transition: all 0.3s;
+}
+.badge:hover {
+  background-color: var(--bs-warning);
+  color: #000 !important;
+}
+
+.amount input:focus {
+  border: none;
+  box-shadow: none;
+  color: white;
+  border: 1px solid tomato;
+}
+
+.amount input::placeholder {
+  color: greenyellow;
+}
+
+.get_started {
+  padding-block: 12px;
+ 
+  /* display: flex;
+   align-items: center;
+   justify-content: flex-end; */
+}
+
+.get_started
+/*=============================================== Settings section =============================================================*/
+
+.cta {
+  position: relative;
+  padding: 12px 18px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.cta:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 50px;
+  background: tomato;
+  width: 150px;
+  height: 45px;
+  transition: all 0.3s ease;
+}
+
+.cta span {
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: white;
+}
+
+.cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: white;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover:before {
+  width: 100%;
+  background: tomato;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active {
+  transform: scale(0.95);
+}
+
+/*~======================================== quiz section ==========================================================================*/
+#inCorrect,
+#correct,
+#alert_number {
+  display: none;
+}
+#quiz_section {
+  position: relative;
+  z-index: 999;
+}
+
+#inCorrect,
+#correct {
+  border: none !important;
+  padding: 12px 16px !important;
+}
+/*~======================================== quiz section ==========================================================================*/
+.btn-class-name {
+  --color: 180, 255, 100;
+  border-radius: 0.5em;
+  transition: 0.3s;
+  background-color: rgba(var(--color), 0.2);
+  color: rgb(var(--color));
+  fill: rgb(var(--color));
+  font-family: monospace;
+  font-weight: bolder;
+  font-size: x-large;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  border: 2px solid rgb(var(--color));
+  box-shadow: 0 0 10px rgba(var(--color), 0.4);
+  outline: none;
+  display: flex;
+  align-items: center;
+  padding: 0.5em 1em;
+  font-size: 21px;
+  
+}
+
+.btn-class-name:hover {
+  box-shadow: 0 0 0 5px rgba(var(--color), 0.5);
+}
+
+.btn-class-name span {
+  transform: scale(0.8);
+  transition: 0.3s;
+}
+
+.btn-class-name:hover span {
+  transform: scale(1);
+}
+
+.btn-class-name svg {
+  font-size: 0;
+  transform: scale(0.5) translateX(0%) rotate(-180deg);
+  transition: 0.3s;
+}
+
+.btn-class-name:hover svg {
+  font-size: 20px;
+  transform: scale(1) translateX(20%) rotate(0deg);
+}
+
+.btn-class-name:active {
+  transition: 0s;
+  box-shadow: 0 0 0 5px rgb(var(--color));
+}
+
+/*~======================================== finish section ==========================================================================*/
+#score {
+  width: fit-content;
+  padding: 10px 20px;
+  background-color: transparent;
+  margin-inline: auto;
+  border-radius: 8px;
+  border: 1px solid green;
+  font-size: 65px;
+}
+#finish_section {
+  position: relative;
+  z-index: 999;
+}
+/*~======================================== finish section ==========================================================================*/
+.fixed_logo {
+ 
+  width: fit-content;
+  height: fit-content;
+  border-radius: 6px;
+  background-color: #212529;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  align-items: center;
+  padding-block: 8px;
+  cursor: pointer;
+  transition: all 1s;
+  padding-inline: 10px;
+  
+}
+
+
+
+.fixed_logo span {
+  background-color: tomato;
+  display: inline-block;
+  margin-block: 3px;
+  padding: 8px;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline-end: 5px;
+}
+
+.fixed_logo span.by_ {
+  width: 30px;
+  height: 30px;
+  background-color: #263238;
+}
+
